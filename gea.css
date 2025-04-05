@@ -1,0 +1,47 @@
+/* Custom animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes frameBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Custom classes */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.photo-frame {
+    animation: frameBounce 4s ease-in-out infinite;
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    opacity: 0;
+}
+
+.floral-bg {
+    background-image: url('https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: 30%;
+    background-repeat: repeat;
+    opacity: 0.15;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .photo-frame {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
